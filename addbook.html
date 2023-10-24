@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .navbar {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .footer {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1>Library Management</h1>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <h2>Welcome to Library Management System</h2>
+            <p>Add books here...</p>
+            
+           
+            <form id="bookForm">
+                <label for="bookName">Book Name:</label>
+                <input type="text" id="bookName" name="bookName">
+                <label for="numberOfBooks">Number of Books:</label>
+                <input type="text" id="numberOfBooks" name="numberOfBooks">
+                <button type="button" onclick="addBooks()">Add Books</button>
+            </form>
+            
+            <h3>Book List</h3>
+            <table>
+                <tr>
+                    <th>Book Name</th>
+                    <th>Number of Books</th>
+                </tr>
+                <tbody id="bookList">
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2023 Library Management System
+    </div>
+    
+    <script>
+        function addBooks() {
+           
+            var bookName = document.getElementById("bookName").value;
+            var numberOfBooks = document.getElementById("numberOfBooks").value;
+            
+            
+            var newRow = document.createElement("tr");
+            
+           
+            var nameCell = document.createElement("td");
+            var numberCell = document.createElement("td");
+            
+            
+            nameCell.textContent = bookName;
+            numberCell.textContent = numberOfBooks;
+            
+            
+            newRow.appendChild(nameCell);
+            newRow.appendChild(numberCell);
+            
+            
+            document.getElementById("bookList").appendChild(newRow);
+            
+            // Clear the input fields
+            document.getElementById("bookName").value = "";
+            document.getElementById("numberOfBooks").value = "";
+        }
+    </script>
+</body>
+</html>
