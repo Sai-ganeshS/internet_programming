@@ -3,70 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>login page</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #3498db; 
-            background-image: url(down.jpg);
-            margin: 0;
-            padding: 0;
+        #maincontainer{
+            background-color: aquamarine;
+            height: 250px;
+            width: 250px;
+            position: relative;
+            left:300px;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            border-radius: 30px;
+            
         }
+        #innercontainer input[type="text"],input[type="password"]
+        {
+            border-radius: 70px;
+        }
+        
 
-        #loginContainer {
-            background: rgba(255, 255, 255, 0.8); 
-            border-radius: 5px;
-            padding: 20px;
-            width: 300px;
-            text-align: center;
-        }
-
-        input[type="text"],
-        input[type="password"] {
-            width: 70%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-            font-size: 16px;
-        }
-
-        input[type="submit"] {
-            background: #2980b9; 
-            color: #fff;
-            padding: 10px;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        input[type="submit"]:hover {
-            background: #2574a9; 
-        }
-        #BUTTON{
-            border-radius: 20px;
-            background-color: #2980b9;
-            color: brown;
-        }
     </style>
 </head>
 <body>
-    <div id="loginContainer">
-        <form action="" method="post">
-            <h1>Login Page</h1>
-            <br>
-            <center>UserName: <input type="text"></center>
-            <br>
-            <center>Password: <input type="password"></center>
-            <br>
-            
-        </form>
-        <a href="main.html"><button id="BUTTON">SUBMIT</button></a>
+    
+    <center><h1>login page </h1></center>
+
+
+    <div id="maincontainer">
+            <div id="innercontainer">
+                   <form action="/exampractice/index.php">
+                    name: <input type="text" id="name">
+                    <br>
+                    Password: <input type="password" id="pass">
+                    <center><input type="submit" name="" id=""></center>
+                   </form>
+            </div>
     </div>
 </body>
 </html>
